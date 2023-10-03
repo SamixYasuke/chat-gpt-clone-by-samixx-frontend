@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import 'useNavigate'
 import SideBar from "../Components/SideBar";
 import style from "../CSS/conversation.module.css";
 import NotLoggedIn from "../Components/NotLoggedIn";
@@ -6,8 +7,10 @@ import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
 import addImg from "../assets/icons8-plus.svg";
 import { decodeUserToken, startNewConversation } from "../Utilities/userData";
 
-const Home = ({ toggleMobileNav }) => {
+const Home = () => {
   const userToken = localStorage.getItem("user Token");
+
+  const navigate = useNavigate(); // Add this line to get the 'navigate' function
 
   async function handleStartNewConversation() {
     try {
@@ -18,7 +21,6 @@ const Home = ({ toggleMobileNav }) => {
     }
   }
 
-
   if (!userToken) {
     return <NotLoggedIn />;
   } else {
@@ -26,13 +28,17 @@ const Home = ({ toggleMobileNav }) => {
       <main className={style.conversationContainer}>
         <SideBar />
         <div className={style.newConvo}>
-          <h1>START A NEW CHAT TO GET STARTED</h1>
+          <h1 onClick={handleStartNewConversation}>CLICK ME TO START A NEW CONVERSATION</h1> 
         </div>
         <div className={style.chatMenuTop}>
-        <img onClick={toggleMobileNav} className={style.mobileOpen} src={hamburgerMenu} alt="menu" />
-        <p>Lorem ipsum dolor sit .</p>
-        <img onClick={handleStartNewConversation} className={style.mobileCreate} src={addImg} alt="add" />
-      </div>
+          <p>Chat GPT Clone By Samuel</p>
+          <img
+            onClick={handleStartNewConversation}
+            className={style.mobileCreate}
+            src={addImg}
+            alt="add"
+          />
+        </div>
       </main>
     );
   }
