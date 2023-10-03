@@ -3,7 +3,7 @@ import axios from "axios";
 // Function to get user details
 export async function getUserDetails(userToken) {
   try {
-    const response = await axios.get("http://localhost:3000/getuserdetail", {
+    const response = await axios.get("https://samixx-github-clone-backend.onrender.com/getuserdetail", {
       headers: {
         Authorization: `Bearer ${userToken}`,
       },
@@ -18,7 +18,7 @@ export async function getUserDetails(userToken) {
 // Function to get conversations for the user
 export async function getConversationsForUser(userId, userToken) {
   try {
-    const response = await axios.get(`http://localhost:3000/conversations/${userId}`, {
+    const response = await axios.get(`https://samixx-github-clone-backend.onrender.com/conversations/${userId}`, {
       headers: {
         Authorization: `Bearer ${userToken}`,
       },
@@ -37,7 +37,7 @@ export async function getConversationsForUser(userId, userToken) {
 export async function startNewConversation(userToken) {
   try {
     const response = await axios.post(
-      "http://localhost:3000/startConversation",
+      "https://samixx-github-clone-backend.onrender.com/startConversation",
       {},
       {
         headers: {
