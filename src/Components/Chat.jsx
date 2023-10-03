@@ -21,7 +21,7 @@ const Chat = ({ toggleMobileNav }) => {
     const fetchConversationData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/conversation/${userId}/${conversationId}`,
+          `https://samixx-github-clone-backend.onrender.com/conversation/${userId}/${conversationId}`,
           {
             headers: {
               Authorization: `Bearer ${userToken}`,
@@ -55,7 +55,7 @@ const Chat = ({ toggleMobileNav }) => {
     if (userPrompt.trim().length > 0) {
       try {
         const sendChat = await axios.post(
-          `http://localhost:3000/sendMessage/${conversationId}`,
+          `https://samixx-github-clone-backend.onrender.com/sendMessage/${conversationId}`,
           {
             userPrompt: userPrompt,
           },
