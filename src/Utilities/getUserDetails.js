@@ -5,7 +5,7 @@ const userToken = localStorage.getItem("user Token");
 
 const getUserDetails = async (setUserDetails) => { // Accept setUserDetails as a parameter
     try {
-        const response = await axios.get("http://localhost:3000/getuserdetail", {
+        const response = await axios.get("https://samixx-github-clone-backend.onrender.com/getuserdetail", {
             headers: {
                 Authorization: `Bearer ${userToken}`
             }
