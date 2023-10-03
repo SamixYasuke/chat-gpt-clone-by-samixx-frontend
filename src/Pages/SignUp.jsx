@@ -38,7 +38,7 @@ const Register = ()=>{
             userPassword : userPassword
         }
         try {
-            const postUser = await axios.post("http://localhost:3000/registeruser", data);
+            const postUser = await axios.post("https://samixx-github-clone-backend.onrender.com/registeruser", data);
             if(postUser.status === 201){
                 alert("Registered Successfully, you'll be redirected to the Login Page")
                 navigate("/login");
