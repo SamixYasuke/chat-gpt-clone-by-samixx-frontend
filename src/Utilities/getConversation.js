@@ -7,7 +7,7 @@ const userId = decodeUserToken(userToken);
 
 const getConversation = async (setConversations) => { // Accept setConversations as a parameter
     try {
-        const response = await axios.get(`http://localhost:3000/conversations/${userId}`, {
+        const response = await axios.get(`https://samixx-github-clone-backend.onrender.com/conversations/${userId}`, {
             headers: {
                 Authorization: `Bearer ${userToken}`
             }
