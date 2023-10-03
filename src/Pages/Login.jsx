@@ -30,7 +30,7 @@ const Login = () => {
     if (emailIsEntered && passwordIsEntered) {
       setButtonIsActive(true);
       try {
-        const logUser = await axios.post("http://localhost:3000/loginuser", data);
+        const logUser = await axios.post("https://samixx-github-clone-backend.onrender.com/loginuser", data);
         localStorage.setItem("user Token", logUser.data.token);
         console.log(logUser.data);
         setButtonIsActive(false);
