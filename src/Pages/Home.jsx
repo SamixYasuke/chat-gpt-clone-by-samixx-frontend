@@ -8,7 +8,6 @@ import { decodeUserToken, startNewConversation } from "../Utilities/userData";
 
 const Home = ({ toggleMobileNav }) => {
   const userToken = localStorage.getItem("user Token");
-  console.log("User Token:", userToken);
 
   async function handleStartNewConversation() {
     try {
