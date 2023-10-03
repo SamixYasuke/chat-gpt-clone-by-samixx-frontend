@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"; // Import 'useNavigate'
 import SideBar from "../Components/SideBar";
 import style from "../CSS/conversation.module.css";
 import NotLoggedIn from "../Components/NotLoggedIn";
-import hamburgerMenu from "../assets/icons8-hamburger-menu-50.png";
 import addImg from "../assets/icons8-plus.svg";
 import { decodeUserToken, startNewConversation } from "../Utilities/userData";
 
