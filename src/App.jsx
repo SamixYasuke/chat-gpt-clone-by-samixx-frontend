@@ -23,7 +23,6 @@ const App = () => {
           path="/chat/:userId/:conversationId"
           element={<Conversation toggleMobileNav={toggleMobileNav} mobileNavIsShown={mobileNavIsShown} setMobileNavIsShown={setMobileNavIsShown} />}
         />
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
