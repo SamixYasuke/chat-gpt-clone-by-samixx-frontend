@@ -1,0 +1,55 @@
+.notLoggedInPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.notLoggedInContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 234, 234);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #10a37f;
+    padding: 30px 60px;
+}
+  
+.openAIImgContainer img {
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+  
+.notLoggedInContainer a {
+    color: #10a37f;
+    text-decoration: none;
+}
+
+.notLoggedInContainer a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.notLoggedInText{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .notLoggedInContainer {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(235, 234, 234);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #10a37f;
+        padding: 30px 60px;
+    }
+}

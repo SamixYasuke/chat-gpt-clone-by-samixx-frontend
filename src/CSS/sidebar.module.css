@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400&display=swap');
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+.sideSectionContainer{
+    background-color: rgb(36, 35, 35);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    width: 360px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.sideSectionContainerClosed{
+    background-color: rgb(36, 35, 35);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    width: 290px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Martel Sans', sans-serif;
+    left: -600px;
+}
+
+.sideSectionContainer{
+    position: relative;
+}
+
+.sideSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideSectionBtn1{
+    position: absolute;
+    top: 2%;
+    display: flex;
+    gap: 5px;
+}
+
+.openConversationBtn{
+    background-color: rgb(230, 226, 226);
+    color: rgb(0, 0, 0);
+    width: 40px;
+    outline: none;
+    border-style: solid;
+    border-color: rgb(219, 218, 218);
+    border-width: 0.5px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    text-align: start;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    margin: 10px 0 0 10px;
+}
+
+.openConversationBtn:hover{
+    background-color: transparent;
+}
+
+.sideSectionBtn1 button:nth-child(1){
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    width: 170px;
+    outline: none;
+    border-style: solid;
+    border-color: rgb(143, 143, 143);
+    border-width: 0.5px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    text-align: start;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sideSectionBtn1 button:nth-child(2){
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    width: 40px;
+    outline: none;
+    border-style: solid;
+    border-color: rgb(143, 143, 143);
+    border-width: 0.5px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    text-align: start;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sideSectionContent {
+    position: absolute;
+    top: 12%;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.sideSectionContent::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 10px;
+    margin-left: 10px;
+    height: min-content;
+}
+
+.sideSectionContent:hover::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+.sideSectionConversation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 3px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: start;
+}
+
+.newChat{
+    display: flex;
+    justify-content: center!important;
+    align-items: center;
+}
+
+.sideSectionConversation > p, .newChat > p{
+    font-size: small;
+}
+
+.sideSectionConversation:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+.sideSectionConversationChat{
+    width: 16px;
+    cursor: pointer;
+}
+
+.sideSectionConversationDelete{
+    width: 20px;
+    cursor: pointer;
+}
+
+.sideSectionBtn2Container{
+    position: absolute;
+    bottom: 2%;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .1s ease-in-out;
+    padding: 0;
+}
+
+.sideSectionBtn2{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+}
+
+.sideSectionBtn2 h3{
+    font-size: 13px;
+}
+
+.sideSectionBtn2Container:hover{
+    background-color: rgb(43, 43, 43);
+    border-radius: 5px;
+}
+
+.sectionPopUp{
+    position: absolute;
+    background-color: black;
+    bottom: 120%;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sectionPopUp:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+.sectionPopUp p{
+    font-size: 12px!important;
+}
+
+.sectionPopUp p:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+.sideSectionBtn2Container button{
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+    outline: none;
+    border-style: none;
+    color: rgb(255, 255, 255);
+    border-color: rgb(143, 143, 143);
+    box-sizing: border-box;
+    text-align: start;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sideSectionBtn2 p{
+    font-size: large;
+}
+
+.sideSectionBtn2 > div h4{
+    background-color: rgb(143, 143, 143);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.sideSectionContainerMobile{
+    display: none;
+}
+
+.sideSectionContainerMobileActive{
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .sideSectionContainer{
+        display: none;
+    }
+
+    .sideSectionContainerMobile {
+        background-color: rgba(20, 20, 20, 0.897);
+        color: white;
+        height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        font-family: "Martel Sans", sans-serif;
+        position: absolute;
+        left: 0;
+        z-index: 1
+    }
+
+    .sideSectionContainerMobileActive{
+        display: block;
+        background-color: rgba(20, 20, 20, 0.897);
+        color: white;
+        height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        font-family: "Martel Sans", sans-serif;
+        position: absolute;
+        left: 0;
+        z-index: 1
+    }
+
+    .sideSectionContent {
+        position: absolute;
+        top: 12%;
+        height: 70%;
+        width: 80%;
+        overflow-y: scroll;
+    }
+
+    .sideSectionBtn1 button:nth-child(1){
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        width: 180px;
+        box-sizing: content-box;
+    }
+    
+    .sideSectionContent::-webkit-scrollbar {
+        width: 8px;
+        background-color: rgba(255, 255, 255, 0.425);
+        border-radius: 10px;
+        margin-left: 10px;
+        height: min-content;
+    }
+
+    .sideSectionBtn2:hover{
+        background-color: rgb(77, 75, 75);
+        border-radius: 10px;
+    }
+}

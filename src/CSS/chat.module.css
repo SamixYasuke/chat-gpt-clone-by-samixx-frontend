@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400&display=swap');
+
+.chatContainer{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Martel Sans', sans-serif;
+    overflow-y: scroll;
+    font-size: 15px;
+}
+
+.chatContainer::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 10px;
+    margin-left: 10px;
+    height: auto; /* Use 'auto' to match content height */
+}
+
+.chatContainer:hover::-webkit-scrollbar {
+    background-color: rgba(143, 143, 143, 0.808);
+}
+
+.systemContainer{
+    background-color: rgb(240, 237, 237);
+    height: auto;
+}
+
+.emptyChat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container covers the entire viewport height */
+    margin: 0; /* Remove default margin */
+    width: 100%;
+    margin: 0;
+}
+  
+.emptyChat h1{
+    text-align: center;
+    color: rgba(139, 139, 139, 0.5);
+    pointer-events: none;
+}
+
+.system{
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.system > img{
+    object-fit: contain;
+}
+
+.userContainer{
+    background-color: rgb(255, 255, 255);
+}
+
+.user{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.user > h4{
+    background-color: rgb(143, 140, 140);
+    color: white;
+    padding: 10px;
+    height: 20px;
+    line-height: 18px;
+}
+
+.chatForm {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Adjust this as needed */
+    margin-left: 90px;
+    max-width: 1000px;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Set the background color to match your textarea's background */
+    border: 1px solid #ccc; /* Add border for better separation */
+    border-radius: 4px; /* Optional: Add border radius for styling */
+    padding: 8px; /* Optional: Add padding for spacing */
+}
+
+.chatForm textarea {
+    resize: none;
+    width: 80%; /* Adjust this as needed */
+    margin: 0;
+    border: none; /* Remove textarea border if desired */
+    outline: none;
+}
+
+.chatForm button {
+    background: none;
+    border: none;
+}
+
+.activeBtn{
+    cursor: pointer;
+}
+
+.inactiveBtn{
+    cursor: not-allowed;
+}
+
+.gap{
+    margin-bottom: 230px;
+}
+
+.chatMenuTop{
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .chatContainer{
+        margin-top: 50px;
+    }
+
+    .chatMenuTop{
+        display: flex;
+        position: fixed;
+        top: 0;
+        background-color: rgb(50, 51, 54);
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        padding: 0 2px;
+    }
+
+    .mobileOpen{
+        width: 25px;
+        transform: translateX(30px);
+        cursor: pointer;
+    }
+    
+    .mobileCreate{
+        transform: translateX(-30px);
+        cursor: pointer;
+    }
+
+    .chatForm {
+        position: fixed;
+        bottom: 5%;
+        left: 50%;
+        width: calc(75% - 4%); /* This will make the chat form take up 96% of the screen width */
+        margin-left: 0;
+        max-width: 1000px;
+    }           
+    
+    .inputContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff; /* Set the background color to match your textarea's background */
+        border: 1px solid #ccc; /* Add border for better separation */
+        border-radius: 4px; /* Optional: Add border radius for styling */
+        padding: 8px; /* Optional: Add padding for spacing */
+    }
+    
+    .chatForm textarea {
+        resize: none;
+        width: 80%; /* Adjust this as needed */
+        margin: 0;
+        border: none; /* Remove textarea border if desired */
+        outline: none;
+    }
+    
+    .chatForm button {
+        background: none;
+        border: none;
+    }
+    
+    .activeBtn{
+        cursor: pointer;
+    }
+    
+    .inactiveBtn{
+        cursor: not-allowed;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mobileOpen{
+        width: 25px;
+        transform: translateX(10px);
+        cursor: pointer;
+    }
+    
+    .mobileCreate{
+        transform: translateX(-10px);
+        cursor: pointer;
+    }
+}

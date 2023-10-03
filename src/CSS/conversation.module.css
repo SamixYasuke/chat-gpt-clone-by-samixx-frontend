@@ -1,0 +1,48 @@
+.conversationContainer {
+  display: flex;
+}
+  
+.newConvo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the container covers the entire viewport height */
+  margin: 0; /* Remove default margin */
+  width: 100%;
+}
+
+.newConvo h1 {
+  text-align: center;
+  color: rgba(139, 139, 139, 0.5);
+  pointer-events: none;
+}
+
+.chatMenuTop{
+  display: none;
+}
+
+
+@media screen and (max-width: 770px) {
+  .chatMenuTop{
+    display: flex;
+    position: fixed;
+    top: 0;
+    background-color: rgb(50, 51, 54);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 0 2px;
+}
+
+.mobileOpen{
+    width: 25px;
+    transform: translateX(30px);
+    cursor: pointer;
+}
+
+.mobileCreate{
+    transform: translateX(-30px);
+    cursor: pointer;
+}
+}
